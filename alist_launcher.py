@@ -135,7 +135,7 @@ def reset_config(root):
 def main():
     # 初始化窗口
     root = ThemedTk(theme="vista")
-    root.title("Alist启动器 v2.0")
+    root.title("Alist启动器 beta0.1")
     root.configure(bg=WIN11_BG)
     
     # 设置图标
@@ -162,8 +162,8 @@ def main():
     if not config:
         root.withdraw()
         path = filedialog.askopenfilename(
-            title="选择Alist程序",
-            filetypes=[("Alist程序", "alist*.exe"), ("可执行文件", "*.exe")]
+            title="选择Alist helper程序",
+            filetypes=[("Alist helper程序", "AlistHelper*.exe"), ("可执行文件", "*.exe")]
         )
         if path and save_config(path):
             try:
